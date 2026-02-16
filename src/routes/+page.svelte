@@ -9,7 +9,6 @@ let registeredEventIds = $state([0, 1, 2, 3, 4]);
 let upcomingEventIds = $state([5, 6, 7, 8, 9, 10, 11]);
 </script>
 
-<Header {user} />
 
 <main class="max-w-[1280px] mx-auto">
     <div id="greeting" class="m-4">
