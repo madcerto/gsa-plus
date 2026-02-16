@@ -2,8 +2,7 @@
 import { Card, Button } from "flowbite-svelte";
 import { AwardOutline, ClockOutline } from "flowbite-svelte-icons";
 
-let points = $state(42);
-let hours = $state(7);
+const { points, hours } = $props();
 </script>
 
 <Card size="lg" class="p-4 mx-4 gap-4">
