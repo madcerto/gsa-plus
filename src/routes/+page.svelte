@@ -3,10 +3,10 @@ import { Heading } from "flowbite-svelte";
 import Header from "./Header.svelte";
 import PointsOverview from "./PointsOverview.svelte";
 
-let user = $state({ fullName: "Juan Doe" });
+let user = $state({ fullName: "Juan Doe", avatarImgUrl: "https://flowbite-svelte.com/images/profile-picture-3.webp" });
 </script>
 
-<Header />
+<Header {user} />
 
 <main class="max-w-[1280px] mx-auto">
     <div id="greeting" class="m-4">

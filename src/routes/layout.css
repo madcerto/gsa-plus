@@ -26,6 +26,7 @@
   --color-secondary-900: #0c4a6e;
 
   --color-gray: #aaa;
+  --color-red: #ff0000;
 }
 
 @source "../../node_modules/flowbite-svelte/dist";
