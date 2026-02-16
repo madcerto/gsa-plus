@@ -1,11 +1,25 @@
 <script lang="ts">
-import { Card, Heading } from "flowbite-svelte";
-import { CalendarMonthOutline, MapPinAltOutline } from "flowbite-svelte-icons";
+import { Alert, Card, Heading } from "flowbite-svelte";
+import { CalendarMonthOutline, MapPinAltOutline, InfoCircleSolid } from "flowbite-svelte-icons";
 
-const event = $state({ title: "Event title", description: "A quick description of what will happen at this event", location: "1234 Market St., Philadelphia, PA 19104", date: "Mar. 1st", time: "10am - 3pm" });
+const event = $state({
+    title: "Event title",
+    description: "A quick description of what will happen at this event",
+    location: "1234 Market St., Philadelphia, PA 19104",
+    date: "Mar. 1st",
+    time: "10am - 3pm",
+    past: false
+});
 </script>
 
 <main class="max-w-[1280px] mx-auto">
+    {#if event.past}
+    <Alert border class="m-4 flex flex-row">
+        <InfoCircleSolid class="h-5 w-5" />
+        <span class="font-bold">Note:</span>
+        This event has already passed
+    </Alert>
+    {/if}
     <div class="m-4 flex flex-row gap-4">
         <img src="https://flowbite-svelte.com/images/image-1.webp" alt="placeholder" class="w-full flex-1 rounded-md shadow-md" />
         <div class="flex-1 m-4 flex flex-col gap-8">
