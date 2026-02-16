@@ -1,10 +1,10 @@
 <script lang="ts">
 import { Heading, Hr } from "flowbite-svelte";
-import Header from "./Header.svelte";
 import PointsOverview from "./PointsOverview.svelte";
 import EventList from "./EventList.svelte";
+import sampleUser from "./sampleUser.json";
 
-let user = $state({ fullName: "Juan Doe", stats: { points: 42, hours: 7 }, avatarImgUrl: "https://flowbite-svelte.com/images/profile-picture-3.webp" });
+let user = $state(sampleUser);
 let registeredEventIds = $state([0, 1, 2, 3, 4]);
 let upcomingEventIds = $state([5, 6, 7, 8, 9, 10, 11]);
 </script>

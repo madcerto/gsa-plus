@@ -2,9 +2,10 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
         import Header from "./Header.svelte";
+        import sampleUser from "./sampleUser.json";
 
 	let { children } = $props();
-        let user = $state({ fullName: "Juan Doe", stats: { points: 42, hours: 7 }, avatarImgUrl: "https://flowbite-svelte.com/images/profile-picture-3.webp" });
+        let user = $state(sampleUser);
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
