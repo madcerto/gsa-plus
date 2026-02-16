@@ -6,7 +6,7 @@ const { eventIds, imgUrl } = $props();
 
 <div class="flex flex-row flex-wrap">
 {#each eventIds as eventId}
-    <Card href="/events/{eventId}" img={eventId % 2 == 0 ? imgUrl : undefined} horizontal class="m-4" imgClass="max-w-40">
+    <Card href="/event/{eventId}" img={eventId % 2 == 0 ? imgUrl : undefined} horizontal class="m-4" imgClass="max-w-40">
     <div class="m-4 flex flex-col gap-2">
         <Heading tag="h4">Event title</Heading>
         <p>A quick description of what will happen at this event</p>
