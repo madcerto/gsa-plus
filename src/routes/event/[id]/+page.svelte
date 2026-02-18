@@ -1,6 +1,7 @@
 <script lang="ts">
 import { Alert, Card, Heading, Button } from "flowbite-svelte";
 import { CalendarMonthOutline, MapPinAltOutline, InfoCircleSolid } from "flowbite-svelte-icons";
+import { page } from "$app/state";
 
 const event = $state({
     title: "Event title",
@@ -11,7 +12,7 @@ const event = $state({
     past: false
 });
 
-let signedUp = $state(false);
+let signedUp = $state(Number(page.params.id) > 4 ? false : true);
 const toggleSignup = () => signedUp = !signedUp;
 </script>
 
