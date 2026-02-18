@@ -11,4 +11,6 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
 <Header {user} />
-{@render children()}
+<main class="max-w-[1280px] mx-auto">
+    {@render children()}
+</main>
