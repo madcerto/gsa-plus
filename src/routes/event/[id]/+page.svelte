@@ -34,7 +34,7 @@ const toggleSignup = () => signedUp = !signedUp;
             <Card class="p-4 text-secondary-900 flex flex-row gap-4"><CalendarMonthOutline class="shrink-0 h-6 w-6" /> {event.date} | {event.time}</Card>
             <Card class="p-4 text-secondary-900 flex flex-row gap-4"><MapPinAltOutline class="shrink-0 h-6 w-6" /> {event.location}</Card>
             {#if signedUp}
-            <Button class="bg-red hover:bg-dark-red" onclick={toggleSignup}>I am no longer able to attend this event</Button>
+            <Button class="bg-dark-red hover:bg-red" onclick={toggleSignup}>I am no longer able to attend this event</Button>
             {:else}
             <Button class="bg-secondary-900" onclick={toggleSignup}>I will be attending this event</Button>
             {/if}
