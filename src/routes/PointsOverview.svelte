@@ -16,5 +16,5 @@ const { points, hours } = $props();
         </div>
         <span class="flex flex-row gap-1"><ClockOutline class="shrink-0 h-6 w-6" /> Hours: {hours}</span>
     </div>
-    <Button class="w-fit self-end">Redeem Rewards</Button>
+    <Button class="w-fit self-end" href="/rewards">Redeem Rewards</Button>
 </Card>
