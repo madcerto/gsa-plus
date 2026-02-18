@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Alert, Card, Heading } from "flowbite-svelte";
+import { Alert, Card, Heading, Button } from "flowbite-svelte";
 import { CalendarMonthOutline, MapPinAltOutline, InfoCircleSolid } from "flowbite-svelte-icons";
 
 const event = $state({
@@ -10,6 +10,9 @@ const event = $state({
     time: "10am - 3pm",
     past: false
 });
+
+let signedUp = $state(false);
+const toggleSignup = () => signedUp = !signedUp;
 </script>
 
 <main class="max-w-[1280px] mx-auto">
@@ -30,6 +33,11 @@ const event = $state({
             </p>
             <Card class="p-4 text-secondary-900 flex flex-row gap-4"><CalendarMonthOutline class="shrink-0 h-6 w-6" /> {event.date} | {event.time}</Card>
             <Card class="p-4 text-secondary-900 flex flex-row gap-4"><MapPinAltOutline class="shrink-0 h-6 w-6" /> {event.location}</Card>
+            {#if signedUp}
+            <Button class="bg-red hover:bg-dark-red" onclick={toggleSignup}>I am no longer able to attend this event</Button>
+            {:else}
+            <Button class="bg-secondary-900" onclick={toggleSignup}>I will be attending this event</Button>
+            {/if}
         </div>
     </div>
 </main>
