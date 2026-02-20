@@ -1,19 +1,21 @@
 <script lang="ts">
 import { Badge, Button, Card } from "flowbite-svelte";
 
-const {
+let {
     title = "$25 Digital Gift Card",
     description = "Pita Chip Gift Card",
     image = "https://static.wixstatic.com/media/a7f4a4_81c1fe2b18b546fd98dd080c6b922782~mv2.png/v1/fill/w_184,h_216,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a7f4a4_81c1fe2b18b546fd98dd080c6b922782~mv2.png",
     requiredPoints = 250,
-    userPoints
+    userPoints,
+    redeeming = $bindable()
 } = $props();
 
 const canRedeem = $derived(userPoints >= requiredPoints);
 
 function handleRedeem() {
     if (canRedeem) {
-        alert("Reward redeemed!");
+        // alert("Reward redeemed!");
+        redeeming = true;
     }
 }
 </script>
