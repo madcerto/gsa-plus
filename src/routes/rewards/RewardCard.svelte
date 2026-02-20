@@ -34,23 +34,16 @@ function handleRedeem() {
       </div>
 
       <Badge color={canRedeem ? "green" : "red"}>
-        {requiredPoints} pts
+        {userPoints} / {requiredPoints} pts
       </Badge>
     </div>
 
     <!-- Progress / Points Info -->
-    <div>
-      <div class="flex justify-between text-sm mb-1">
-        <span>Your Points</span>
-        <span class="font-medium">{userPoints} pts</span>
-      </div>
-
-      <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
         <div
           class="h-2.5 rounded-full bg-secondary-600 transition-all"
           style="width: {Math.min((userPoints / requiredPoints) * 100, 100)}%"
         ></div>
-      </div>
     </div>
 
     <!-- Redeem Button -->
