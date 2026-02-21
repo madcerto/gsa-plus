@@ -19,7 +19,7 @@ const toggleSignup = () => signedUp = !signedUp;
 {/if}
 
 <div class="m-4 flex flex-row gap-4">
-    <img src="https://flowbite-svelte.com/images/image-1.webp" alt="placeholder" class="w-full flex-1 rounded-md shadow-md" />
+    <img src="https://flowbite-svelte.com/images/image-1.webp" alt="placeholder" class="w-full flex-1 rounded-md shadow-md object-cover" />
     <div class="flex-1 m-4 flex flex-col gap-8">
         <Heading tag="h2">{event.title}</Heading>
         <p>
@@ -31,7 +31,7 @@ const toggleSignup = () => signedUp = !signedUp;
         {#if signedUp}
         <Button class="bg-dark-red hover:bg-red hover:cursor-pointer" onclick={toggleSignup}>I am no longer able to attend this event</Button>
         {:else}
-        <Button class="bg-secondary-900 hover:cursor-pointer" onclick={toggleSignup}>I will be attending this event</Button>
+        <Button color="secondary" class="hover:cursor-pointer" onclick={toggleSignup}>I will be attending this event</Button>
         {/if}
     </div>
 </div>
