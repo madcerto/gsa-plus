@@ -2,15 +2,9 @@
 import { Alert, Card, Heading, Button } from "flowbite-svelte";
 import { CalendarMonthOutline, MapPinAltOutline, InfoCircleSolid } from "flowbite-svelte-icons";
 import { page } from "$app/state";
+import sampleEvent from "./sampleEvent.json";
 
-const event = $state({
-    title: "Event title",
-    description: "A quick description of what will happen at this event",
-    location: "1234 Market St., Philadelphia, PA 19104",
-    date: "Mar. 1st",
-    time: "10am - 3pm",
-    past: false
-});
+const event = $state(sampleEvent);
 
 let signedUp = $state(Number(page.params.id) > 4 ? false : true);
 const toggleSignup = () => signedUp = !signedUp;
