@@ -2,8 +2,10 @@
 import { Alert, Card, Heading, Button } from "flowbite-svelte";
 import { CalendarMonthOutline, MapPinAltOutline, InfoCircleSolid } from "flowbite-svelte-icons";
 import { page } from "$app/state";
+import sampleUser from "../../sampleUser.json";
 import sampleEvent from "./sampleEvent.json";
 
+const user = $state(sampleUser);
 const event = $state(sampleEvent);
 
 let signedUp = $state(Number(page.params.id) > 4 ? false : true);
@@ -32,6 +34,9 @@ const toggleSignup = () => signedUp = !signedUp;
         <Button class="bg-dark-red hover:bg-red hover:cursor-pointer" onclick={toggleSignup}>I am no longer able to attend this event</Button>
         {:else}
         <Button color="secondary" class="hover:cursor-pointer" onclick={toggleSignup}>I will be attending this event</Button>
+        {/if}
+        {#if user.admin && !event.past}
+        <Button class="bg-white text-secondary-900 border-2 border-secondary-900 hover:bg-gray hover:cursor-pointer" href="/event/{page.params.id}/attendance">Record attendance</Button>
         {/if}
     </div>
 </div>

@@ -1,5 +1,6 @@
 {
     "fullName": "Juan Doe",
     "stats": { "points": 85, "hours": 7 },
-    "avatarImgUrl": "https://flowbite-svelte.com/images/profile-picture-3.webp"
+    "avatarImgUrl": "https://flowbite-svelte.com/images/profile-picture-3.webp",
+    "admin": true
 }

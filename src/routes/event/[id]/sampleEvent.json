@@ -1,0 +1,8 @@
+{
+    "title": "Event title",
+    "description": "A quick description of what will happen at this event",
+    "location": "1234 Market St., Philadelphia, PA 19104",
+    "date": "Mar. 1st",
+    "time": "10am - 3pm",
+    "past": false
+}
