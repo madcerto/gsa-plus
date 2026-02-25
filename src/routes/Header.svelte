@@ -19,6 +19,7 @@ const { user } = $props();
         </DropdownHeader>
         <DropdownGroup>
             <DropdownItem>Attended Events</DropdownItem>
+            {#if user.admin}<DropdownItem href="/admin">Admin dashboard</DropdownItem>{/if}
             <DropdownItem class="text-red">Sign out</DropdownItem>
         </DropdownGroup>
     </Dropdown>
